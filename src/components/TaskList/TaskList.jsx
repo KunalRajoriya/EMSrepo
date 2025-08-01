@@ -1,7 +1,7 @@
 
 // -------------5-------------------
 
-const TaskList = () => {
+const TaskList = ({data}) => {
   return (
     <div className="overflow-x-auto flex items-center justify-start  h-[55%] w-full gap-5 py-5 mt-10">
       <div className="flex-shrink-0 h-full w-[300px] p-5 bg-rose-400 rounded-3xl">
@@ -56,7 +56,6 @@ const TaskList = () => {
           consequuntur nostrum qui, asperiores sunt aut!
         </p>
       </div>
-      
       <div className="flex-shrink-0 h-full w-[300px] p-5 bg-fuchsia-400 rounded-3xl">
         <div className="flex justify-between items-center  ">
           <h3 className="bg-red-600 text-sm px-3 py-1 rounded-2xl" >

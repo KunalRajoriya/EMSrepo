@@ -10,12 +10,13 @@ const App = () => {
   useEffect(() => {
 
     // -------------8-------------------
-    setLocalStorage();
-    getLocalStorage();
+    setLocalStorage()
+    getLocalStorage()
   },)
 
   const [user, setuser] = useState(null)
-  const Authdata = useContext(Authcontext);
+  const [LoggedInUserData, setLoggedInUserData] = useState(null)
+  const Authdata = useContext(Authcontext)
 
 
   useEffect(() => {
@@ -30,22 +31,22 @@ const App = () => {
 
 
   const handleLogin = (email, password) => {
-    if (Authdata && Authdata.admin.find((e) => e.email === email && e.password === password)) {
-      setuser('admin');
-      localStorage.setItem('loggedInUser', JSON.stringify({ role: 'admin' }));
-    } else if (Authdata && Authdata.employees.find((e) => e.email === email && e.password === password)) {
-      setuser('employee');
-      localStorage.setItem('loggedInUser', JSON.stringify({ role: 'employee' }));
+    if (email == 'admin@example.com' && password == '123') {
+      setuser('admin')
+      localStorage.setItem('loggedInUser', JSON.stringify({ role: 'admin' }))
+    } else if (Authdata) {
+      const employee = Authdata.employees.find((e) => e.email === email && e.password === password)
+      if (employee) {
+        setuser('employee')
+        setLoggedInUserData(employee)
+        localStorage.setItem('loggedInUser', JSON.stringify({ role: 'employee' }))
+      }
+
     }
     else {
-      alert("invalid credentials");
+      alert("invalid credentials")
     }
   }
-
-
-
-
-
 
   return (
     <>
@@ -55,7 +56,7 @@ const App = () => {
       ) : user === 'admin' ? (
         <AdminDashboard />
       ) : (
-        <EmployeeDashboard />
+        (user == 'employee' ? <EmployeeDashboard data = {LoggedInUserData} /> : null)
       )}
     </>
   );

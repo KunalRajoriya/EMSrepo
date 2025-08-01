@@ -4,8 +4,15 @@
 const employees = [
     {
         id: "emp001",
-        email: "john.doe@example.com",
+        firstname: "Amit",
+        email: "amit@company.in",
         password: "123",
+        taskNumber: {
+            active: 2,
+            newTask: 1,
+            completed: 1,
+            failed: 0
+        },
         tasks: [
             {
                 taskTitle: "Prepare Sales Report",
@@ -41,8 +48,15 @@ const employees = [
     },
     {
         id: "emp002",
-        email: "jane.smith@example.com",
+        firstname: "Priya",
+        email: "priya@company.in",
         password: "123",
+        taskNumber: {
+            active: 2,
+            newTask: 1,
+            completed: 1,
+            failed: 1
+        },
         tasks: [
             {
                 taskTitle: "Design Mockups",
@@ -88,8 +102,15 @@ const employees = [
     },
     {
         id: "emp003",
-        email: "michael.brown@example.com",
+        firstname: "Ravi",
+        email: "ravi@company.in",
         password: "123",
+        taskNumber: {
+            active: 2,
+            newTask: 1,
+            completed: 1,
+            failed: 0
+        },
         tasks: [
             {
                 taskTitle: "Server Maintenance",
@@ -125,8 +146,15 @@ const employees = [
     },
     {
         id: "emp004",
-        email: "emily.jones@example.com",
+        firstname: "Sneha",
+        email: "sneha@company.in",
         password: "123",
+        taskNumber: {
+            active: 2,
+            newTask: 1,
+            completed: 1,
+            failed: 1
+        },
         tasks: [
             {
                 taskTitle: "Social Media Strategy",
@@ -172,8 +200,15 @@ const employees = [
     },
     {
         id: "emp005",
-        email: "david.wilson@example.com",
+        firstname: "Karan",
+        email: "karan@company.in",
         password: "123",
+        taskNumber: {
+            active: 2,
+            newTask: 1,
+            completed: 1,
+            failed: 0
+        },
         tasks: [
             {
                 taskTitle: "Inventory Check",
@@ -209,9 +244,11 @@ const employees = [
     }
 ];
 
+
 const admin = [
     {
         id: "admin001",
+        firstname: "admin",
         email: "admin@example.com",
         password: "123"
     }
