@@ -16,8 +16,8 @@ const AcceptTask = () => {
                     consequuntur nostrum qui, asperiores sunt aut!
                 </p>
                 <div className='flex justify-between mt-4'>
-                    <button className='bg-green-400 py-1 px-2 text-sm rounded-2xl border-2 border-gray-500'>Mark as Failed</button>
-                    <button className='bg-red-500 py-1 px-2 text-sm rounded-2xl border-2 border-rose-600'>Mark as Completed</button>
+                    <button className='bg-green-400 py-1 px-2 text-sm rounded-2xl border-2 border-gray-500'>Mark Completed</button>
+                    <button className='bg-red-500 py-1 px-2 text-sm rounded-2xl border-2 border-rose-600'>Mark Failed</button>
                 </div>
             </div>
         </div>
