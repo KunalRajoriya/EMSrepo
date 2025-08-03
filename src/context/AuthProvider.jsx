@@ -7,7 +7,7 @@ const [UserData, setUserData] = useState(null)
 
 useEffect(() => {
   setLocalStorage()
-  const{employees,admin}= getLocalStorage();
+  const{employees,admin}= getLocalStorage()
   setUserData({employees,admin})
 
   
