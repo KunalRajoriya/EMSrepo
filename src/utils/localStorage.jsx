@@ -48,8 +48,8 @@ const employees = [
     },
     {
         id: "emp002",
-        firstname: "Priya",
-        email: "priya@company.in",
+        firstname: "roshni",
+        email: "roshni@company.in",
         password: "123",
         taskNumber: {
             active: 2,
@@ -102,8 +102,8 @@ const employees = [
     },
     {
         id: "emp003",
-        firstname: "Ravi",
-        email: "ravi@company.in",
+        firstname: "kunal",
+        email: "kunal@company.in",
         password: "123",
         taskNumber: {
             active: 2,
@@ -200,8 +200,8 @@ const employees = [
     },
     {
         id: "emp005",
-        firstname: "Karan",
-        email: "karan@company.in",
+        firstname: "shashi",
+        email: "shashi@company.in",
         password: "123",
         taskNumber: {
             active: 2,
@@ -242,7 +242,7 @@ const employees = [
             }
         ]
     }
-];
+]; 
 
 
 const admin = [
