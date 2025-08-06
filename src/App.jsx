@@ -52,7 +52,7 @@ const App = () => {
     }
   }
   const logOut = () => {
-    localStorage.setItem('loggedInUser', '')
+    localStorage.removeItem('loggedInUser');
     window.location.reload()
   }
   return (

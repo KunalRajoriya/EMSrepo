@@ -9,6 +9,7 @@ import NewTask from "./NewTask";
 const TaskList = ({ data }) => {
   
   return (
+    
     <div className="overflow-x-auto flex items-center justify-start  h-[55%] w-full gap-5 py-5 mt-10">
       
       {
@@ -16,6 +17,7 @@ const TaskList = ({ data }) => {
           
           if(elem.active){
             return <AcceptTask key={idx} data ={elem}/>
+            
           }
           if(elem.completed){
             return <CompleteTask key={idx} data ={elem}/>
