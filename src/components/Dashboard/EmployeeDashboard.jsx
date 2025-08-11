@@ -8,7 +8,7 @@ const EmployeeDashboard = ({data, logOut}) => {
   return (
     
     <div>
-      <div className="p-10 bg-[#1C1C1C] h-screen">
+      <div className="p-10  bg-[radial-gradient(ellipse_at_top,_#131a2e_0%,_#0b0f1a_70%)] text-white h-screen">
   
         <Header data = {data} logOut={logOut} />
         <TaskListNum data = {data} />

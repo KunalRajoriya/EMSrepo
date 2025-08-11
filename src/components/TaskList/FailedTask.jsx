@@ -3,9 +3,9 @@ import React from 'react'
 const FailedTask = ({ data }) => {
     return (
         <div>
-            <div className="flex-shrink-0 h-full w-[300px] p-5 bg-rose-400 rounded-3xl">
+            <div className="flex-shrink-0 h-full w-[300px] p-5 border-red-500 bg-gradient-to-br from-[#1e1e40] to-red-500/40 shadow-lg rounded-3xl">
                 <div className="flex justify-between items-center  ">
-                    <h3 className="bg-red-600 text-sm px-3 py-1 rounded-2xl" >
+                    <h3 className="bg-[#ff4d4d] text-sm px-3 py-1 rounded-2xl" >
                         {data.category}
                     </h3>
                     <h4>{data.taskDate}</h4>

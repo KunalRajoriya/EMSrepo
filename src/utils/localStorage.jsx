@@ -1,6 +1,3 @@
-
-// -------------8-------------------
-
 const employees = [
     {
         id: "emp001",
@@ -8,9 +5,9 @@ const employees = [
         email: "amit@company.in",
         password: "123",
         taskNumber: {
-            active: 2,
+            active: 1,
             newTask: 1,
-            completed: 1,
+            completed: 2,
             failed: 0
         },
         tasks: [
@@ -29,7 +26,7 @@ const employees = [
                 taskDescription: "Meet client to discuss project requirements.",
                 taskDate: "2025-06-22",
                 category: "Meetings",
-                active: true,
+                active: false,
                 newTask: true,
                 completed: false,
                 failed: false
@@ -43,17 +40,27 @@ const employees = [
                 newTask: false,
                 completed: true,
                 failed: false
+            },
+            {
+                taskTitle: "Market Analysis",
+                taskDescription: "Prepare a market research document.",
+                taskDate: "2025-06-15",
+                category: "Research",
+                active: false,
+                newTask: false,
+                completed: true,
+                failed: false
             }
         ]
     },
     {
         id: "emp002",
-        firstname: "roshni",
+        firstname: "Roshni",
         email: "roshni@company.in",
         password: "123",
         taskNumber: {
-            active: 2,
-            newTask: 1,
+            active: 3,
+            newTask: 0,
             completed: 1,
             failed: 1
         },
@@ -64,7 +71,7 @@ const employees = [
                 taskDate: "2025-06-24",
                 category: "Design",
                 active: true,
-                newTask: true,
+                newTask: false,
                 completed: false,
                 failed: false
             },
@@ -93,7 +100,7 @@ const employees = [
                 taskDescription: "Resolve UI issues in mobile version.",
                 taskDate: "2025-06-19",
                 category: "Development",
-                active: false,
+                active: true,
                 newTask: false,
                 completed: false,
                 failed: true
@@ -102,14 +109,14 @@ const employees = [
     },
     {
         id: "emp003",
-        firstname: "kunal",
+        firstname: "Kunal",
         email: "kunal@company.in",
         password: "123",
         taskNumber: {
             active: 2,
-            newTask: 1,
-            completed: 1,
-            failed: 0
+            newTask: 2,
+            completed: 0,
+            failed: 1
         },
         tasks: [
             {
@@ -118,7 +125,7 @@ const employees = [
                 taskDate: "2025-06-20",
                 category: "IT",
                 active: true,
-                newTask: false,
+                newTask: true,
                 completed: false,
                 failed: false
             },
@@ -133,14 +140,14 @@ const employees = [
                 failed: false
             },
             {
-                taskTitle: "Backup Data",
-                taskDescription: "Create backup of production database.",
+                taskTitle: "Old Backup Restore",
+                taskDescription: "Restore old backup for testing.",
                 taskDate: "2025-06-21",
                 category: "IT",
                 active: false,
                 newTask: false,
-                completed: true,
-                failed: false
+                completed: false,
+                failed: true
             }
         ]
     },
@@ -151,8 +158,8 @@ const employees = [
         password: "123",
         taskNumber: {
             active: 2,
-            newTask: 1,
-            completed: 1,
+            newTask: 0,
+            completed: 2,
             failed: 1
         },
         tasks: [
@@ -162,7 +169,7 @@ const employees = [
                 taskDate: "2025-06-20",
                 category: "Marketing",
                 active: true,
-                newTask: true,
+                newTask: false,
                 completed: false,
                 failed: false
             },
@@ -193,6 +200,16 @@ const employees = [
                 category: "Business",
                 active: false,
                 newTask: false,
+                completed: true,
+                failed: false
+            },
+            {
+                taskTitle: "Partnership Review",
+                taskDescription: "Review partnership terms.",
+                taskDate: "2025-06-15",
+                category: "Business",
+                active: false,
+                newTask: false,
                 completed: false,
                 failed: true
             }
@@ -200,14 +217,14 @@ const employees = [
     },
     {
         id: "emp005",
-        firstname: "shashi",
+        firstname: "Shashi",
         email: "shashi@company.in",
         password: "123",
         taskNumber: {
-            active: 2,
-            newTask: 1,
+            active: 1,
+            newTask: 2,
             completed: 1,
-            failed: 0
+            failed: 1
         },
         tasks: [
             {
@@ -215,7 +232,7 @@ const employees = [
                 taskDescription: "Update inventory records.",
                 taskDate: "2025-06-23",
                 category: "Logistics",
-                active: true,
+                active: false,
                 newTask: true,
                 completed: false,
                 failed: false
@@ -239,11 +256,30 @@ const employees = [
                 newTask: false,
                 completed: true,
                 failed: false
+            },
+            {
+                taskTitle: "Damaged Goods Review",
+                taskDescription: "Inspect damaged goods for claims.",
+                taskDate: "2025-06-15",
+                category: "Logistics",
+                active: false,
+                newTask: false,
+                completed: false,
+                failed: true
+            },
+            {
+                taskTitle: "New Supplier Search",
+                taskDescription: "Find potential new suppliers.",
+                taskDate: "2025-06-14",
+                category: "Procurement",
+                active: false,
+                newTask: true,
+                completed: false,
+                failed: false
             }
         ]
     }
-]; 
-
+];
 
 const admin = [
     {
@@ -252,19 +288,15 @@ const admin = [
         email: "admin@example.com",
         password: "123"
     }
-]; 
+];
 
 export const setLocalStorage = () => {
-
     localStorage.setItem('employees', JSON.stringify(employees));
     localStorage.setItem('admin', JSON.stringify(admin));
-
 }
+
 export const getLocalStorage = () => {
     const employees = JSON.parse(localStorage.getItem('employees'));
     const admin = JSON.parse(localStorage.getItem('admin'));
-    
     return { employees, admin }
-
-    
-} 
+}
