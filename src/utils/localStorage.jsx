@@ -5,7 +5,7 @@ const employees = [
         email: "amit@company.in",
         password: "123",
         taskNumber: {
-            active: 1,
+            accepted: 1,
             newTask: 1,
             completed: 2,
             failed: 0
@@ -16,7 +16,7 @@ const employees = [
                 taskDescription: "Generate monthly sales report.",
                 taskDate: "2025-06-20",
                 category: "Reporting",
-                active: true,
+                accepted: true,
                 newTask: false,
                 completed: false,
                 failed: false
@@ -26,7 +26,7 @@ const employees = [
                 taskDescription: "Meet client to discuss project requirements.",
                 taskDate: "2025-06-22",
                 category: "Meetings",
-                active: false,
+                accepted: false,
                 newTask: true,
                 completed: false,
                 failed: false
@@ -36,7 +36,7 @@ const employees = [
                 taskDescription: "Input latest client data into CRM.",
                 taskDate: "2025-06-18",
                 category: "Data Entry",
-                active: false,
+                accepted: false,
                 newTask: false,
                 completed: true,
                 failed: false
@@ -46,7 +46,7 @@ const employees = [
                 taskDescription: "Prepare a market research document.",
                 taskDate: "2025-06-15",
                 category: "Research",
-                active: false,
+                accepted: false,
                 newTask: false,
                 completed: true,
                 failed: false
@@ -59,7 +59,7 @@ const employees = [
         email: "roshni@company.in",
         password: "123",
         taskNumber: {
-            active: 3,
+            accepted: 3,
             newTask: 0,
             completed: 1,
             failed: 1
@@ -70,7 +70,7 @@ const employees = [
                 taskDescription: "Create UI mockups for the new app feature.",
                 taskDate: "2025-06-24",
                 category: "Design",
-                active: true,
+                accepted: true,
                 newTask: false,
                 completed: false,
                 failed: false
@@ -80,7 +80,7 @@ const employees = [
                 taskDescription: "Present quarterly updates to the team.",
                 taskDate: "2025-06-21",
                 category: "Presentation",
-                active: false,
+                accepted: false,
                 newTask: false,
                 completed: true,
                 failed: false
@@ -90,7 +90,7 @@ const employees = [
                 taskDescription: "Analyze customer feedback for improvements.",
                 taskDate: "2025-06-23",
                 category: "Research",
-                active: true,
+                accepted: true,
                 newTask: false,
                 completed: false,
                 failed: false
@@ -100,7 +100,7 @@ const employees = [
                 taskDescription: "Resolve UI issues in mobile version.",
                 taskDate: "2025-06-19",
                 category: "Development",
-                active: true,
+                accepted: true,
                 newTask: false,
                 completed: false,
                 failed: true
@@ -113,19 +113,31 @@ const employees = [
         email: "kunal@company.in",
         password: "123",
         taskNumber: {
-            active: 2,
+            accepted: 2,
             newTask: 2,
             completed: 0,
             failed: 1
         },
         tasks: [
+           
             {
+                taskTitle: "Database Optimization",
+                taskDescription: "Analyze and optimize database queries for better performance.",
+                taskDate: "2025-06-25",
+                category: "IT",
+                accepted: false,
+                newTask: true,
+                completed: false,
+                failed: false
+            },
+            
+             {
                 taskTitle: "Server Maintenance",
                 taskDescription: "Perform scheduled maintenance on server.",
                 taskDate: "2025-06-20",
                 category: "IT",
-                active: true,
-                newTask: true,
+                accepted: true,
+                newTask: false,
                 completed: false,
                 failed: false
             },
@@ -134,9 +146,19 @@ const employees = [
                 taskDescription: "Check system for vulnerabilities.",
                 taskDate: "2025-06-25",
                 category: "Security",
-                active: true,
-                newTask: true,
+                accepted: true,
+                newTask: false,
                 completed: false,
+                failed: false
+            },
+            {
+                taskTitle: "Security Patch Update",
+                taskDescription: "Install the latest security updates on all servers.",
+                taskDate: "2025-06-28",
+                category: "IT",
+                accepted: false,
+                newTask: false,
+                completed: true,
                 failed: false
             },
             {
@@ -144,7 +166,7 @@ const employees = [
                 taskDescription: "Restore old backup for testing.",
                 taskDate: "2025-06-21",
                 category: "IT",
-                active: false,
+                accepted: false,
                 newTask: false,
                 completed: false,
                 failed: true
@@ -157,7 +179,7 @@ const employees = [
         email: "sneha@company.in",
         password: "123",
         taskNumber: {
-            active: 2,
+            accepted: 2,
             newTask: 0,
             completed: 2,
             failed: 1
@@ -168,7 +190,7 @@ const employees = [
                 taskDescription: "Plan next month’s content calendar.",
                 taskDate: "2025-06-20",
                 category: "Marketing",
-                active: true,
+                accepted: true,
                 newTask: false,
                 completed: false,
                 failed: false
@@ -178,7 +200,7 @@ const employees = [
                 taskDescription: "Coordinate product launch activities.",
                 taskDate: "2025-06-25",
                 category: "Operations",
-                active: true,
+                accepted: true,
                 newTask: false,
                 completed: false,
                 failed: false
@@ -188,7 +210,7 @@ const employees = [
                 taskDescription: "Collect feedback from team members.",
                 taskDate: "2025-06-19",
                 category: "HR",
-                active: false,
+                accepted: false,
                 newTask: false,
                 completed: true,
                 failed: false
@@ -198,7 +220,7 @@ const employees = [
                 taskDescription: "Meet vendor for partnership proposal.",
                 taskDate: "2025-06-18",
                 category: "Business",
-                active: false,
+                accepted: false,
                 newTask: false,
                 completed: true,
                 failed: false
@@ -208,7 +230,7 @@ const employees = [
                 taskDescription: "Review partnership terms.",
                 taskDate: "2025-06-15",
                 category: "Business",
-                active: false,
+                accepted: false,
                 newTask: false,
                 completed: false,
                 failed: true
@@ -221,7 +243,7 @@ const employees = [
         email: "shashi@company.in",
         password: "123",
         taskNumber: {
-            active: 1,
+            accepted: 1,
             newTask: 2,
             completed: 1,
             failed: 1
@@ -232,7 +254,7 @@ const employees = [
                 taskDescription: "Update inventory records.",
                 taskDate: "2025-06-23",
                 category: "Logistics",
-                active: false,
+                accepted: false,
                 newTask: true,
                 completed: false,
                 failed: false
@@ -242,7 +264,7 @@ const employees = [
                 taskDescription: "Inspect warehouse safety measures.",
                 taskDate: "2025-06-22",
                 category: "Safety",
-                active: true,
+                accepted: true,
                 newTask: false,
                 completed: false,
                 failed: false
@@ -252,7 +274,7 @@ const employees = [
                 taskDescription: "Plan weekly delivery schedule.",
                 taskDate: "2025-06-19",
                 category: "Logistics",
-                active: false,
+                accepted: false,
                 newTask: false,
                 completed: true,
                 failed: false
@@ -262,7 +284,7 @@ const employees = [
                 taskDescription: "Inspect damaged goods for claims.",
                 taskDate: "2025-06-15",
                 category: "Logistics",
-                active: false,
+                accepted: false,
                 newTask: false,
                 completed: false,
                 failed: true
@@ -272,7 +294,7 @@ const employees = [
                 taskDescription: "Find potential new suppliers.",
                 taskDate: "2025-06-14",
                 category: "Procurement",
-                active: false,
+                accepted: false,
                 newTask: true,
                 completed: false,
                 failed: false

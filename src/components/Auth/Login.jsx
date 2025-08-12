@@ -20,8 +20,13 @@ const login = ({handleLogin}) => {
   }
 
   return (
-    <div className="flex h-screen w-screen items-center justify-center bg-black">
-      <div className="border-2 rounded-3xl h-2/5 w-1/3 border-emerald-600  ">
+    <div className="flex h-screen w-screen items-center justify-center  bg-[radial-gradient(ellipse_at_center,_rgba(0,180,120,0.08)_0%,_transparent_40%)] 
+  bg-gradient-to-b from-[#0a0f1a] via-[#05080f] to-[#010203] 
+  relative overflow-hidden">
+    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[rgba(0,255,200,0.05)] to-transparent 
+    animate-[moveGradient_8s_ease-in-out_infinite]"></div>
+      <div className="rounded-3xl w-[90%] max-w-md bg-white/6 border border-white/6 backdrop-blur-sm shadow-[0_8px_40px_rgba(2,6,23,0.6)] p-8">
+
         <form 
         onSubmit={(e) => {
           submitHandler(e);
@@ -34,16 +39,19 @@ const login = ({handleLogin}) => {
             setEmail(e.target.value);
           }
         }
-          required className=' w-3/4 outline-none border-2 border-emerald-600 text xl px-5 py-3 rounded-full' type="email" placeholder="Email" />
+          required className='w-full border-2 border-emerald-600/60 bg-transparent text-white text-lg px-5 py-3 rounded-full focus:outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/40 transition-all' type="email" placeholder="Email" />
 
           <input 
           value={password}
           onChange={(e) => {
             setPassword(e.target.value);
           }}
-          required className='w-3/4 outline-none border-2 border-emerald-600 text xl px-5 py-3 rounded-full mt-3'  type="password" placeholder="Password" /> 
+          required className='w-full border-2 border-emerald-600/60 bg-transparent text-white text-lg px-5 py-3 rounded-full focus:outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/40 transition-all mt-3'  type="password" placeholder="Password" /> 
 
-          <button className=' outline-none border-2 bg-emerald-600 text xl px-5 py-3 rounded-full mt-10' >Log In</button>
+          <button className=' w-full bg-emerald-500 hover:bg-emerald-400 text-white text-lg px-5 py-3 rounded-full mt-8 
+  shadow-[0_0_10px_rgba(16,185,129,0.7),0_0_30px_rgba(16,185,129,0.5)]
+  hover:shadow-[0_0_15px_rgba(16,185,129,0.9),0_0_30px_rgba(16,185,129,0.7)]
+  transition-all ' >Log In</button>
           
         </form>
       </div>
